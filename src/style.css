@@ -1,0 +1,258 @@
+* {
+    margin: o;
+    padding: 0;
+
+}
+
+body {
+    font-family: 'Gabarito', sans-serif;
+    font-weight: lighter;
+}
+
+.navbar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid black 1px;
+    gap: 10px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index:1;
+
+}
+
+.navbar__s1__title {
+    color: #A038F5;
+}
+
+.navbar__s2 {
+    padding: 4px;
+    margin-top: 5px;
+    border: solid black 1px;
+    border-radius: 40px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    /* vertically centers icon + input */
+    gap: 10px;
+    /* space between icon and input */
+    align-items: center;
+}
+
+.navbar__s2 input {
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    background: transparent;
+}
+
+.navbar__s2 input:focus {
+    outline: none;
+}
+
+.navbar__s3 {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+
+}
+.Courses, .mylearning{
+    cursor: pointer;
+}
+.navbar__s4{
+    display: none;
+}
+ --/My Learning Popup--
+
+.mylearning{
+position: relative;
+cursor: pointer;
+
+}
+.mylearning__popup{
+display: none;
+background-color:white;
+border-radius: 10px;
+padding: 10px;
+border: black solid 1px;
+position: absolute;
+right: 22px;
+width: 100px;
+text-align: center;
+}
+:focus .mylearning__popup{
+    background-color: transparent;
+}
+
+.course-card{
+    cursor: pointer;
+}
+.mylearning:hover .mylearning__popup{
+    display: block;
+}
+
+.categories {
+    display: flex;
+    padding: 10px;
+    border-bottom: solid black 1px;
+    justify-content: space-around;
+}
+
+.categories p {
+    background-color: #A038F5;
+    color: white;
+    border-radius: 30px;
+    padding: 10px;
+    border: solid #A038F5 1px;
+    animation-name: cat;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+.categories p:hover{
+    background-color: transparent;
+    color: black;
+    border: solid #A038F5 1px;
+    
+}
+.sale-image img {
+   width:100%;
+    position:relative;
+    border-radius: 10px;
+
+}
+.sale-image2{
+   width: 30%;
+   border: solid black 2px;
+   background-color: transparent;
+   border-radius: 10px;
+   padding: 2%;
+   position: absolute;
+   top: 40%;
+   left: 5%;
+   animation-name: zoom;
+   animation-duration: 2s;
+   opacity: 0;
+   animation-fill-mode: forwards;
+
+}
+@keyframes zoom {
+  0%, 100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.recommended {
+    padding: 10px;
+}
+
+.recommended__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.course-card {
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
+    
+}
+
+.course-card img {
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+
+}
+
+.topics {
+    padding: 10px;
+}
+
+.topics__container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+
+
+}
+
+.topics__container p {
+    border: solid grey 2px;
+    padding: 10px;
+    flex-grow: 1;
+    flex-basis: 25%;
+ 
+}
+.popular{
+    padding: 10px;
+}
+.popular__container{
+    display: flex;
+     flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.footer{
+    padding: 10px;
+    background-color: black;
+    color: white;
+
+}
+.footer__one{
+    display: flex;
+    gap: 10px;
+}
+.footer__one p{
+ margin: 20px;   
+}
+.footer__two{
+    margin: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+/* Media Queries */
+@media screen and (max-width:800px) {
+    body{
+        font-size: 10px;
+    }}
+
+    @media screen and (max-width:600px) {
+    .course-card{
+            flex-basis: 40%;
+    }
+    .categories{
+        display: none;
+    }
+    .navbar__s2,.navbar__s3{
+        display: none;
+    }
+    .navbar__s4{
+        display: block;
+
+}
+.sale-image2{
+    position: absolute;
+    top: 16%;
+    width: 150px;
+    height: 90px;
+}  
+.popular{
+    width: 100%;
+}
+.recommended{
+    width: 100%;
+}
+}
+    
